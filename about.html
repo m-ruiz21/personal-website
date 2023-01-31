@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles/app.css">
+        <script src="scripts/about.js"></script>
+    </head>
+    <body>    
+        <!-- navbar -->
+        <div class="navbar">
+            <a>image placeholder</a>
+            <div>
+                <a href="/about.html">About Me</a>
+                <a href="/projects.html">Projects</a>
+                <a href="/service.html">Service</a>
+                <a href="/ai.html">AI</a>
+            </div>
+        </div>
+       <!-- end nav bar   -->
+        
+        <!-- About me  -->
+        <p>picture of me placeholder (float left of text)</p>
+        <div> 
+            <h1> About Me </h1>
+            <h3> Experienced Developer and Teacher </h3>
+            <p>I am a Computer Engineering major at Texas A&M with experience in serverless backend systems, web development, teaching, and IoT prototyping. I am a versatile individual that helps businesses design and implement scalable and efficient solutions. 
+                My goal is to continue learning and growing in the field of technology, with the aim of making a positive impact on the world through mentorship and the development of high-impact products.
+            </p>
+        </div>
+        <!-- end about me  -->
+        
+        <!-- skills  -->
+        <h1>Skills</h1>
+        <div>
+            <script>
+                skills_list = [
+                    {
+                        title : "Programming Languages",
+                        skills : [
+                            {
+                                name: "C++",
+                                percentage: 100   
+                            },
+                            {
+                                name: "C#",
+                                percentage: 100
+                            },
+                            {
+                                name: "C",
+                                percentage: 90
+                            },
+                            {
+                                name: "Python",
+                                percentage: 90
+                            },
+                            {
+                                name: "Java",
+                                percentage: 75
+                            },
+                            {
+                                name: "JavaScript",
+                                percentage: 65
+                            },
+                            {
+                                name: "Rust",
+                                percentage: 65
+                            },
+                            {
+                                name: "Bash Scripting",
+                                percentage: 50
+                            },
+                            {
+                                name: "Armv8 Assembly",
+                                percentage: 50
+                            }
+                        ]
+                    },
+                    {
+                        title : "Frameworks",
+                        skills : [
+                            {
+                                name: ".NET",
+                                percentage: 100   
+                            },
+                            {
+                                name: "TailwincCSS",
+                                percentage: 90
+                            },
+                            {
+                                name: "Next.js",
+                                percentage: 75
+                            },
+                            {
+                                name: "Vue.js",
+                                percentage: 65
+                            },
+                            {
+                                name: "Laravel",
+                                percentage: 55
+                            }
+                        ]
+                    },
+                    {
+                        title : "Cloud",
+                        skills : [
+                            {
+                                name: "Azure Functions",
+                                percentage: 100   
+                            },
+                            {
+                                name: "Cosmos DB",
+                                percentage: 75
+                            },
+                            {
+                                name: "Cloud Computing",
+                                percentage: 60
+                            }
+                        ]
+                    },
+                    {
+                        title : "Prototyping",
+                        skills : [
+                            {
+                                name: "Verilog",
+                                percentage: 100   
+                            },
+                            {
+                                name: "Arduino",
+                                percentage: 75
+                            },
+                            {
+                                name: "3D Printing",
+                                percentage: 60
+                            },
+                            {
+                                name: "AutoCAD",
+                                percentage: 50
+                            }
+                        ]
+                    }
+                ]
+
+                createSkillsGrid(skills_list);
+            </script>
+        </div> 
+        <!-- end skills -->
+
+        <!-- start experience -->
+        <div>
+            <script>
+                let experiences = [
+                    {
+                        company: "Texas A&M University",
+                        logo: "assets/aboutme/tamu.png",
+                        title: "Undergraduate Teaching Assistant",
+                        dates: "2023 - Present",
+                        description: "Assisting Dr Carlisle with his CSCE 222: Discrete Structures of Computing course."
+                    },
+                    {
+                        company: "TAMUhack",
+                        logo: "",
+                        title: "Director - Dev Team",
+                        dates: "2022 - Present",
+                        description: "Aiding in the development of tools that support one of the largest student-run hackathons in the state of Texas."
+                    },
+                    {
+                        company: "Microsoft",
+                        logo: "",
+                        title: "Explore Intern",
+                        dates: "Summer 2022",
+                        description: "SWE / PM internship working on Azure Sentinel in the Cloud Security Team."
+                    },
+                    {
+                        company: "Capital One",
+                        logo: "",
+                        title: "Software Engineering Summiteer",
+                        dates: "August 2021",
+                        description: "Invitation-only summit with one week of workshops + hackathon. This is where my excitement for hackathons began." 
+                    },
+                    {
+                        company: "Private Tutor",
+                        logo: "",
+                        title: "Software Engineering Summiteer",
+                        dates: "2019-2021",
+                        description: "Provided SAT, Physics, Python, and Calculus tutoring for various clients." 
+                    },
+                    {
+                        company: "theCoderSchool",
+                        logo: "",
+                        title: "Code Coach",
+                        dates: "Summer & Fall 2019",
+                        description: "Provided SAT, Physics, Python, and Calculus tutoring for various clients." 
+                    }
+                ];
+
+                createTimeline(experiences);
+            </script> 
+        </div>
+        <!-- end experience -->
+    </body>
+</html>

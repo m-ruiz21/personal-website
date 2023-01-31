@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chat with OpenAI</title>
+  </head>
+  <body>
+    <h1>Chat with OpenAI</h1>
+    <div id="chat-container"></div>
+    <form id="input-form">
+      <input id="input-field" type="text" placeholder="Type your message here">
+      <button type="submit">Send</button>
+    </form>
+    <script>
+      const API_KEY = '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';
+      const API_URL = 'https://api.openai.com/v1/engines/davinci-codex/completions';
+      let previousMessages = [];
+
+      const generateResponse = async (input) => {
+        const response = await fetch(API_URL, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${API_KEY}`
+          },
+          body: JSON.stringify({
+            prompt: `${input}\n${previousMessages.join('\n')}`,
+            temperature: 0.5,
+            max_tokens: 2048
+          })
+        });
+
+        const data = await response.json();
+        return data.choices[0].text;
+      }
+
+      const addMessage = (sender, message) => {
+        const chatContainer = document.getElementById('chat-container');
+        const newMessage = document.createElement('div');
+        newMessage.innerHTML = `<strong>${sender}:</strong> ${message}`;
+        chatContainer.appendChild(newMessage);
+      }
+
+      document.getElementById('input-form').addEventListener('submit', async (event) => {
+        event.preventDefault();
+        const inputField = document.getElementById('input-field');
+        const input = inputField.value;
+        inputField.value = '';
+
+        addMessage('You', input);
+        previousMessages.push(input);
+
+        const response = await generateResponse(input);
+        addMessage('OpenAI', response);
+        previousMessages.push(response);
+      });
+    </script>
+  </body>
+</html>
