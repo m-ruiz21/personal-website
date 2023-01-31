@@ -38,8 +38,7 @@ function createTimeline(experiences) {
                     </div>
                 </div>
             <div class="timeline-right">
-                <h3>${experience.dates}, ${experience.company}</h3>
-                <h2>${experience.title}</h2>
+                <h1>${experience.title}</h1>
                 <p>${experience.description}</p>
             </div> 
         `;
