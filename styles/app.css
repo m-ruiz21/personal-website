@@ -1,31 +1,133 @@
-.navbar {
-    display: flex;
-    justify-content: space-between;
+/* Common  */
+nav {
+  height: 100px;
+  display: flex; 
+  flex-direction: row;
 }
 
+.logo {
+  margin-top: 1rem;
+  margin-left: 1rem;
+  width: 20%
+}
+
+ul {
+  display: flex;
+  justify-content: flex-end;
+  width: 80%;
+  flex-direction: row;
+}
+
+ul li {
+  display: inline-block;
+  margin-top: 1rem;
+  margin-right: 1rem;
+  padding-left: 3rem;
+  text-align: left;
+  border-bottom-style: none;
+  font-size: 1.25rem;
+  font-family: 'Roboto Flex', sans-serif;
+  font-weight: 600;
+}
+
+a:link { text-decoration: none; }
+a:visited { text-decoration: none; }
+a:active { text-decoration: none; }
+a:hover{ text-decoration:underline; }
+a {color: black}
+
+h1, h2, h3, h4, h5, h6, p, a{
+  font-family: 'Roboto Flex', sans-serif;
+}
+
+h1 {
+  font-size: 4.5rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+p {
+  font-size: 1.8rem;
+}
 
 /* home page  */
-#intro {
-    padding-top: 10%;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    align-content: center;
+.intro {
+  padding-top: 10%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }
 
-#intro-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
+.intro-name { 
+  background-color: rgba(80, 125, 250, .50);
+  border-radius: 15px;
 }
 
+.intro-name h1 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-top: 10px;
+  color: #192F6D;
+  font-weight: bolder;
+}
+
+.intro h2 {
+  margin-bottom: 1rem;
+}
+
+.intro p {
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+}
+
+.typing-container {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-top: 2rem;
+  margin-left: 10px;
+}
+
+.cursor {
+  display: inline-block;
+  width: 2px;
+  height: 30px;
+  background-color: black;
+  margin-left: 5px;
+  animation: blink .6s linear infinite alternate;
+}
+
+@keyframes blink {
+  0% {opacity: 1;}
+  40% {opacity: 1;}
+  60% {opacity: 0;}
+  100% {opacity: 0;}
+}
+
+.home-footer {
+  width:100%;
+  display: flex;
+  justify-content: center;
+  position:absolute;
+  bottom: 5%;
+}
+
+.home-footer a {
+  padding-left: 15px;
+  padding-right: 15px;
+}
 
 /* about page  */
 .skill {
-    display:flex;
-    flex-direction: column;
-    justify-content: start;
+  display:flex;
+  flex-direction: column;
+  justify-content: start;
 }
 
 .timeline-item {

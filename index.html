@@ -6,30 +6,52 @@
     <title>Mateo Ruiz</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="styles/app.css">
+    <link rel="stylesheet" href="styles/app.css">    
+    <script src="scripts/common.js"></script>
+    <script src="scripts/home.js"></script>
+    
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300;8..144,600&display=swap" rel="stylesheet">
   </head>
+  
   <body>
     <!-- navbar -->
-      <div class="navbar">
-        <a>image placeholder</a>
-        <div>
-            <a href="about.html">About Me</a>
-            <a href="projects.html">Projects</a>
-            <a href="service.html">Service</a>
-            <a href="ai.html">AI</a>
-        </div>
-      </div>
+    <script> navbar(); </script>
+    <!-- end navbar  -->
+    
     <!-- Main Content -->
-    <div id="intro">
-      <div id="intro-content">
+    <div class="intro">
+      <div>
           <h2>Howdy! I'm</h2>
-          <h1>Mateo Ruiz</h1>
-          <p>Software Developer</p>
+          <div class="intro-name">
+            <h1>Mateo Ruiz</h1>
+          </div>
+          <div class="typing-container">
+            <p id="text" class="text"></p>
+            <span class="cursor"></span>
+          </div>  
+          <script>
+            var content = [
+              "software developer", 
+              "tamuhack director",
+              "teaching assistant",
+              "foodie",
+              "tech bro"
+            ];
+            typewriterEffect(content, speed= 100, interval= 2000);
+          </script> 
       </div>
   </div>
-  <footer>
-    <a href="https://github.com/m-ruiz21">Github</a>
-    <a href="https://www.linkedin.com/in/amateoruiz/">LinkedIn</a>
+  <!-- end main content -->
+
+  <!-- start footer links -->
+  <footer class="home-footer">
+    <a href="https://github.com/m-ruiz21"><img src="assets/home/github.svg" alt="github"></a>
+    <a href="https://www.linkedin.com/in/amateoruiz/"><img src="assets/home/linkedin.svg" alt="linkedin"></a>
   </footer>
+  <!-- end footer links -->
   </body>
 </html>
