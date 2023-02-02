@@ -26,19 +26,89 @@
             <script>
                 let projects = [ 
                     {
-                        logo: "",
+                        logo: "assets/projects/laptop_code.svg",
                         title: "TAMUhack 2023 Page",
-                        description: "Helped create page for the TAMUhack 2023 event, one of the largest annual hackathons in Texas." 
+                        description: "Helped create page for the TAMUhack 2023 event, one of the largest annual hackathons in Texas.", 
+                        link: "https://tamuhack.com/th",
+                        skills: ["TailwindCSS", "Vue.js"]
                     },
                     {
-                        logo: "",
+                        logo: "assets/projects/linux.svg",
                         title: "Virtualization Server",
-                        description: "Helped create page for the TAMUhack 2023 event, one of the largest annual hackathons in Texas." 
+                        description: "Upgraded computer I had previously built and turned it into virtualization server using Hyper-V, Moonlight streaming, and v-gpu unlock.", 
+                        skills: ["Linux", "Servers"] 
                     },
                     {
-                        logo: "",
+                        logo: "assets/projects/world.svg",
                         title: "HowdyHack 2022 Page",
-                        description: "Helped create page for the Howdy Hack 2022 event, our themed hackathon in the fall semester, created for Aggies by Aggies." 
+                        description: "Helped create page for the Howdy Hack 2022 event, our themed hackathon in the fall semester, created for Aggies by Aggies.",
+                        link: "https://tamuhack.com/hh",
+                        skills: ["TailwindCSS", "Vue.js"]
+                    },
+                    {
+                        logo: "assets/projects/terminal.svg",
+                        title: "Aggie Shell",
+                        description: "Linux shell built with Rust. Used along side tutorial as a bonus assignment for my Computer Systems course.",
+                        link: "https://github.com/m-ruiz21/aggie_shell",
+                        skills: ["Linux", "Rust"]
+                    },
+                    {
+                        logo: "assets/projects/wifi.svg",
+                        title: "Packet Spoofer / Sniffer",
+                        description: "Used C++ to implement a spoofing attack on a mock server and intercept the server’s return packet.",
+                        skills: ["C++", "Cybersecurity", "Networking"]
+                    },
+                    {
+                        logo: "assets/projects/server.svg",
+                        title: "Multithreaded TCP Server",
+                        description: "Used C++ to create multithreaded TCP server and client to request and receive client ECG data.",
+                        skills: ["C++", "Backend Design", "Networking"]
+                    },
+                    {
+                        logo: "assets/projects/document.svg",
+                        title: "Pound Text Editor",
+                        description: "Rust port of the kilo command-line text editor by antirez.",
+                        link: "https://github.com/m-ruiz21/pound",
+                        skills: ["Rust"]
+                    },
+                    {
+                        logo: "assets/projects/chip.svg",
+                        title: "Single Cycle ARM Processor",
+                        description: "Using Verilog, created single cycle ARM processor that successfully ran Armv8 Assembly as part of my computer architecture class.",
+                        skills: ["Hardware", "Computer Architecture", "Verilog"]
+                    },
+                    {
+                        logo: "assets/projects/code.svg",
+                        title: "vRun",
+                        description: "Faced with the problem of getting Verilog wave forms in wsl, I created a quick bash script to help me and my classmates manage, run, and view of Verilog scripts and their waveforms more easily. Includes documentation and set up instructions.",
+                        link: "https://github.com/m-ruiz21/vRun",
+                        skills: ["Bash Scripting", "Verilog"]
+                    },
+                    {
+                        logo: "assets/projects/neovim.svg",
+                        title: "Neovim Configuration",
+                        description: "NeoVim text editor configuration using only Lua.",
+                        link: "https://github.com/m-ruiz21/neovim-config",
+                        skills: ["Neovim", "Lua"]
+                    },
+                    {
+                        logo: "assets/projects/computer.svg",
+                        title: "Movie Search App",
+                        description: "Movie Search App using OMDb API as part of my successful application to the Capital One Software Engineering Summit.",
+                        link: "https://github.com/m-ruiz21/capital_one_challenge",
+                        skills: ["TailwindCSS", "Next.js"]
+                    },
+                    {
+                        logo: "assets/projects/3dCube.svg",
+                        title: "3D Printer",
+                        description: "Built and used Vertex 3D printer",
+                        skills: ["Prototyping", "3D printing"]
+                    },
+                    {
+                        logo: "assets/projects/bitcoin.svg",
+                        title: "Bitcoin Miner",
+                        description: "Built two Bitcoin miners with my father in 2016.",
+                        skills: ["Crypto", "Computing"]
                     }
                 ];
                 createTimeline(projects);

@@ -7,10 +7,33 @@ function createTimeline(experiences) {
                 <img src="${experience.logo}" alt="${experience.company} logo">
             </div>
             <div class="timeline-right">
-                <h1>${experience.title}</h1>
+                <div class="project-header">
+                    <h1>${experience.title}</h1>
+                </div>
                 <p>${experience.description}</p>
+                <ul class="skills-list"></ul>
             </div> 
         `;
+
         document.body.appendChild(timelineItem);
+        
+        // adding all the skills
+        let skillsList = timelineItem.querySelector('.skills-list');
+        experience.skills.forEach(function(skill_name){
+            let skill = document.createElement("li");
+            skill.innerHTML = skill_name;
+            skillsList.appendChild(skill); 
+        });
+
+        // check if we need link. if so, add it
+        if ("link" in experience) { 
+            let button = document.createElement("div");
+            button.className = "button-container";
+            button.innerHTML = `
+               <a href=${experience.link}><button>visit</button></a>  
+            `;
+            timelineItem.querySelector('.project-header').appendChild(button);
+            console.log("added link");
+        } 
     });
 }
