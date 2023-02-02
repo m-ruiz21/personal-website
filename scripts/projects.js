@@ -7,7 +7,7 @@ function createTimeline(experiences) {
                 <img src="${experience.logo}" alt="${experience.company} logo">
             </div>
             <div class="timeline-right">
-                <h2>${experience.title}</h2>
+                <h1>${experience.title}</h1>
                 <p>${experience.description}</p>
             </div> 
         `;
