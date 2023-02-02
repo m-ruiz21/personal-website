@@ -36,23 +36,24 @@ a:active { text-decoration: none; }
 a:hover{ text-decoration:underline; }
 a {color: black}
 
-h1, h2, h3, h4, h5, h6, p, a{
+h1, h2, h3, h4, h5, h6, p, a, label{
   font-family: 'Roboto Flex', sans-serif;
 }
 
 h1 {
-  font-size: 4.5rem;
+  font-size: 48px;
+  font-weight:300;
 }
 
-h2 {
-  font-size: 3rem;
+h3 {
+  font-size: 32px;
 }
 
 p {
-  font-size: 1.8rem;
+  font-size: 24px; 
 }
 
-/* home page  */
+/* home page */
 .intro {
   padding-top: 10%;
   align-items: center;
@@ -75,15 +76,18 @@ p {
   padding-top: 10px;
   color: #192F6D;
   font-weight: bolder;
+  font-size: 4rem;
 }
 
 .intro h2 {
   margin-bottom: 1rem;
+  font-size: 3.5rem;
 }
 
 .intro p {
   margin-top: 0rem;
   margin-bottom: 0rem;
+  font-size:2rem;
 }
 
 .typing-container {
@@ -124,20 +128,105 @@ p {
 }
 
 /* about page  */
+.about-me {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.about-me img {
+  max-width: 100%;
+  height: auto;
+  object-fit:scale-down;
+}
+
+.about-me-content {
+  width: 60%;
+  padding-left: 2.5%;
+}
+
+.about-me-content h1 {
+  margin-top: 0rem;
+  margin-bottom: .5rem;
+  font-size: 48px;
+  font-weight:300;
+}
+
+.about-me-content h3 {
+  color: #192F6D;
+  font-size: 32px;
+  font-weight: 500;
+  margin-top: .5rem;
+  margin-bottom: .5rem;
+}
+
+.skills {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+
+.skills h1 {
+  margin-bottom: .5rem;
+  margin-top: 1.5rem;
+}
+
+.skills h3 {
+  font-weight: 400;
+}
+
 .skill {
   display:flex;
   flex-direction: column;
   justify-content: start;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.skill label {
+  font-size: 24px;
+  padding-bottom: .25rem;
+}
+
+progress {
+  width: 80%;
+  height: 30px;
+  border-radius: 10px;
+}
+
+/* For Firefox */
+progress[value]::-moz-progress-bar {
+  background:#192F6D;
+}
+
+/* For Chrome or Safari */
+progress[value]::-webkit-progress-bar{
+  background: #fff;
+  border-radius: 10px;
+  border: 5px;
+  box-shadow: 0 0 0 3px #192F6D inset;
+}
+
+progress[value]::-webkit-progress-value {
+  background-color: #192F6D;
+  border-radius: 10px;
+}
+
+.career {
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .timeline-item {
   display: flex;
   align-items: center;
-  margin-bottom: 5px;
+  margin-bottom: 2rem;
 }
 
 .timeline-left {
-  width: 100px;
+  width: 150px;
   margin-right: 20px;
   text-align: center;
 }
@@ -146,11 +235,26 @@ p {
   flex-grow: 1;
 }
 
+.timeline-right h1 {
+  margin-top: 0rem;
+  margin-bottom: .25rem;
+}
+
+.timeline-right h2 {
+  margin-top: 0rem;
+  margin-bottom:.5rem;
+  color: #192F6D;
+}
+
+.timeline-item p {
+  margin-top: .5rem;
+}
+
 .circle {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
-  border: 4px solid navy;
+  border: 5px solid navy;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -158,6 +262,6 @@ p {
 
 .circle img {
   width: 100%;
-  height: 100%;
-  object-fit: contain;
+  height: auto;
+  object-fit: scale-down;
 }

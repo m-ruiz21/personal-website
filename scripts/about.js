@@ -1,7 +1,7 @@
 function createSkillsDivNode(skills_div) {
     let skillsDivNode = document.createElement("div");
 
-    let titleNode = document.createElement("h2");
+    let titleNode = document.createElement("h3");
     titleNode.innerHTML = skills_div.title;
     skillsDivNode.appendChild(titleNode);
 
@@ -24,7 +24,7 @@ function createSkillsGrid(skills_list) {
         container.appendChild(createSkillsDivNode(skills_div));
     });
 
-    document.body.appendChild(container);
+    document.querySelector('.skills').appendChild(container);
 }
 
 function createTimeline(experiences) {
@@ -35,13 +35,14 @@ function createTimeline(experiences) {
             <div class="timeline-left">
                 <div class="circle">
                     <img src="${experience.logo}" alt="${experience.company} logo">
-                    </div>
                 </div>
+            </div>
             <div class="timeline-right">
+                <h2>${experience.dates}, ${experience.company}</h2>
                 <h1>${experience.title}</h1>
                 <p>${experience.description}</p>
             </div> 
         `;
-        document.body.appendChild(timelineItem);
+        document.querySelector('.career').appendChild(timelineItem);
     });
 }
