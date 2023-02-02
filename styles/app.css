@@ -334,3 +334,10 @@ progress[value]::-webkit-progress-value {
   font-size: 20px;
   font-family: 'Roboto Flex', sans-serif;
 }
+
+/* community */
+
+.community-container {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}

@@ -20,27 +20,28 @@
         <!-- navbar -->
         <script> navbar(); </script>
         <!-- end nav bar   -->
-        
-        <h1>My Service to My Community</h1>
-        <script>
-            let experiences = [ 
-                {
-                    logo: "",
-                    title: "Interfaith",
-                    description: "Food Bank, Hand Me Up Shop, yard work for elderly" 
-                },
-                {
-                    logo: "",
-                    title: "i-9 Sports",
-                    description: "Sports Coaching for kids"
-                }, 
-                {
-                    logo: "",
-                    title: "Hurricane Harvey Relief",
-                    description: "Food bank and helped rebuild houes"
-                } 
-            ];
-            createTimeline(experiences);
-        </script> 
+        <div class="community-container">  
+            <h1>My Service to My Community</h1>
+            <script>
+                let experiences = [ 
+                    {
+                        logo: "assets/service/logo-interfaith.png",
+                        title: "Interfaith",
+                        description: "I am an active volunteer for the Interfaith the Woodlands charity group. In my time with the organization I have aided with the Foodbank, the Hand Me Up Shop, and performed yard work for elderly" 
+                    },
+                    {
+                        logo: "assets/service/i9.png",
+                        title: "i-9 Sports",
+                        description: "Coached baseball, soccer, football, and basketball for kids in my community during my time in high school."
+                    }, 
+                    {
+                        logo: "assets/service/hardhat.png",
+                        title: "Hurricane Harvey Relief",
+                        description: "Aided in the food bank and reconstructing of houses during the Hurrican Harvey disaster."
+                    } 
+                ];
+                createTimeline(experiences);
+            </script> 
+        </div>
     </body>
 </html>
