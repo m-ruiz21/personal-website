@@ -4,8 +4,8 @@ function createTimeline(experiences) {
         timelineItem.className = "timeline-item";
         timelineItem.innerHTML = `
             <div class="timeline-left">
-            <div style="width: 150px">
-                <img src="${experience.logo}" alt="${experience.company} logo" style="width:100%">
+            <div class="circle">
+                <img src="${experience.logo}" alt="${experience.company} logo" style="max-width:75%"> 
             </div>
             </div>
             <div class="timeline-right">

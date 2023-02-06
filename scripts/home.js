@@ -10,9 +10,8 @@ function write(text, speed) {
 }
 
 
-function deleteText(speed) {
+function deleteText(text, speed) {
   var element = document.getElementById("text");
-  var text = element.innerHTML;
   var letters = text.split("");
   setInterval(function(){
     if(letters.length > 0) {
@@ -29,13 +28,13 @@ async function waitForMs(ms) {
 
 
 async function typewriterEffect(content, speed, interval) {  
- var i = 0;
- while (true) {
+  var i = 0;
+  while (true) {
     write(content[i], speed);
     await waitForMs(interval);
-    deleteText(speed); 
+    deleteText(content[i], speed); 
     await waitForMs(interval);
     i++;
     if (i >= content.length) {i=0;}
- }   
+  }   
 }

@@ -4,18 +4,20 @@ function createTimeline(experiences) {
         timelineItem.className = "timeline-item";
         timelineItem.innerHTML = `
             <div class="timeline-left">
-                <img src="${experience.logo}" alt="${experience.company} logo">
+                <div class="circle-space">
+                    <img src="${experience.logo}" alt="${experience.company} logo">
+                </div>
             </div>
             <div class="timeline-right">
                 <div class="project-header">
                     <h1>${experience.title}</h1>
                 </div>
                 <p>${experience.description}</p>
-                <ul class="skills-list"></ul>
+                <ul class="skills-list space-list"></ul>
             </div> 
         `;
 
-        document.body.appendChild(timelineItem);
+        document.body.querySelector('.projects').appendChild(timelineItem);
         
         // adding all the skills
         let skillsList = timelineItem.querySelector('.skills-list');
@@ -28,7 +30,7 @@ function createTimeline(experiences) {
         // check if we need link. if so, add it
         if ("link" in experience) { 
             let button = document.createElement("div");
-            button.className = "button-container";
+            button.className = "button-container visit";
             button.innerHTML = `
                <a href=${experience.link}><button>visit</button></a>  
             `;

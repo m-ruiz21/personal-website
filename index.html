@@ -6,8 +6,8 @@
     <title>Howdy!</title>
     <link rel="icon" type="image/png" href="assets/common/logo.svg"/>
     <meta name="Mateo Ruiz Personal Website" content="Home Page for Andres Mateo Ruiz's portfolio website">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link id="appStyle" rel="stylesheet" href="app.css"><link rel="stylesheet" href="styles/app.css">    
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <link id="appStyle" rel="stylesheet" href="styles/app.css"> 
     <script src="scripts/common.js"></script>
     <script src="scripts/home.js"></script>
     
@@ -16,21 +16,33 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300;8..144,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/helvetica-neue-9" rel="stylesheet">
+
   </head>
   
-  <body>
+  <body id="home-body">
     <!-- navbar -->
-    <script> navbar(); </script>
-    <!-- end navbar  -->
-     
+    <script> 
+      navbar();
+    </script>
+    <!-- end navbar  --> 
+   
+    <div class="stars"></div> 
+    <div class="astronaut">
+      <img style="width:100px; height: auto;" src="/assets/home/astronaut.png" alt="Astronaut">
+    </div>
+
     <!-- Main Content -->
     <div class="intro">
       <div>
-          <h2>Howdy! I'm</h2>
+        <div class="space-intro">
+          <h2>Howdy! I'm&nbsp</h2>
           <div class="intro-name">
             <h1>Mateo Ruiz</h1>
           </div>
+        </div>
           <div class="typing-container">
+            <p class="i-am">I am a&nbsp</p>
             <p id="text" class="text"></p>
             <span class="cursor"></span>
           </div>  
@@ -45,14 +57,18 @@
             typewriterEffect(content, speed= 100, interval= 2000);
           </script> 
       </div>
-  </div>
+    </div>
   <!-- end main content -->
 
   <!-- start footer links -->
   <footer class="home-footer">
     <a href="https://github.com/m-ruiz21"><img src="assets/home/github.svg" alt="github"></a>
     <a href="https://www.linkedin.com/in/amateoruiz/"><img src="assets/home/linkedin.svg" alt="linkedin"></a>
+    <div class="sun"></div>
+    <div id="planets-container"></div>
+    <script src="scripts/planets.js"></script>
   </footer>
+  
   <!-- end footer links -->
   </body>
 </html>
