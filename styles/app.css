@@ -158,6 +158,10 @@ p {
     object-fit:scale-down;
 }
 
+#space-me {
+    display: none;
+}
+
 .about-me-content {
     width: 70%;
     padding-left: 2.5%;

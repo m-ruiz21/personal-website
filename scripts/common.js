@@ -18,12 +18,17 @@ function navbar() {
 
 function change_theme() {
     let currStylesheet = localStorage.getItem("currStylesheet");
-    if (currStylesheet === null || currStylesheet === "space.css") {
-        localStorage.setItem("currStylesheet", "app.css");
+    if (currStylesheet === null || currStylesheet === "styles/space.css") {
+        localStorage.setItem("currStylesheet", "styles/app.css");
         document.getElementById("appStyle").setAttribute("href", "styles/app.css");
-        console.log(window.location.href);
     } else {
-        localStorage.setItem("currStylesheet", "space.css");
+        localStorage.setItem("currStylesheet", "styles/space.css");
         document.getElementById("appStyle").setAttribute("href", "styles/space.css");
     }
 }
+
+window.onload = function() {
+    let currStylesheet = localStorage.getItem("currStylesheet") || "styles/app.css";
+    document.getElementById("appStyle").setAttribute("href", currStylesheet);
+
+};
