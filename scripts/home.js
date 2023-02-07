@@ -41,7 +41,7 @@ async function waitForMs(ms) {
 
 /**
  * @brief "orchestrator" of the typewriter effect code
- * @param {array} content list of words to be written 
+ * @param {array<string>} content list of words to be written 
  * @param {number} speed delay between characters being deleted/written
  * @param {number} interval interval in ms between write and delete functions  
  */

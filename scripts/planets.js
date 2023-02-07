@@ -1,8 +1,8 @@
 /** 
  * @brief calculates and sets the coordinates for the given planet
- * @param planet
- * @param angle
- * @param planetOrbitRadius
+ * @param {object} planet
+ * @param {number} angle - angle which the planet is currently at
+ * @param {number} planetOrbitRadius - distance away from "sun"
 */
 function set_coordinates(planet, angle, planetOrbitRadius) {
   const sun = document.querySelector(".sun");
@@ -16,9 +16,9 @@ function set_coordinates(planet, angle, planetOrbitRadius) {
 
 /**
  * @brief animates n planets given the planetsData
- * @param planetsData
- * @param planetsData.orbitRadius
- * @param planetData.angleRatio - sets relative speed. <1 should slow down >1 should speed up. 1 is base speed.
+ * @param {object} planetsData
+ * @param {number} planetsData.orbitRadius - sets the distance away from "sun"
+ * @param {number} planetsData.angleRatio - sets relative speed. <1 should slow down >1 should speed up. 1 is base speed.
  */
 function animate(planetsData) {
   angle += 0.02;
@@ -33,9 +33,9 @@ function animate(planetsData) {
 
 /**
  * @brief creates all the planet divs and begins animation
- * @param planetsData
- * @param planetsData.orbitRadius
- * @param planetData.angleRatio - sets relative speed. <1 should slow down >1 should speed up. 1 is base speed.
+ * @param {object} planetsData
+ * @param {number} planetsData.orbitRadius
+ * @param {number} planetsData.angleRatio - sets relative speed. <1 should slow down >1 should speed up. 1 is base speed.
  */
 function add_planets(planetsData) {
   
