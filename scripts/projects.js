@@ -3,7 +3,7 @@ function createTimeline(experiences) {
         let timelineItem = document.createElement("div");
         timelineItem.className = "timeline-item";
         timelineItem.innerHTML = `
-            <div class="timeline-left">
+            <div class="timeline-left project-img">
                 <div class="circle-space">
                     <img src="${experience.logo}" alt="${experience.company} logo">
                 </div>
