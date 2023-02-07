@@ -1,3 +1,6 @@
+/**
+ * @brief creates pseudo-component for the navbar for quick editing
+ */
 function navbar() {
     let navbar= document.createElement("nav");
     navbar.className = "navbar";
@@ -16,6 +19,9 @@ function navbar() {
     document.body.appendChild(navbar);
 }
 
+/**
+ * @brief handles the button to change the theme of the page
+ */
 function change_theme() {
     let currStylesheet = localStorage.getItem("currStylesheet");
     if (currStylesheet === null || currStylesheet === "styles/space.css") {
@@ -27,6 +33,9 @@ function change_theme() {
     }
 }
 
+/**
+ * @brief checks state of page theme on load
+ */
 window.onload = function() {
     let currStylesheet = localStorage.getItem("currStylesheet") || "styles/app.css";
     document.getElementById("appStyle").setAttribute("href", currStylesheet);

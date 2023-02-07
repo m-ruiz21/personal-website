@@ -1,5 +1,5 @@
 /** 
- * @breif calculates and sets the coordinates for the given planet
+ * @brief calculates and sets the coordinates for the given planet
  * @param planet
  * @param angle
  * @param planetOrbitRadius
