@@ -1,3 +1,7 @@
+/**
+ * @brief creates timeline for all community service 
+ * @param {List<experience>} experiences - list of experience objects containing logo, company, title, and description
+ */
 function createTimeline(experiences) {
     experiences.forEach(function(experience) {
         let timelineItem = document.createElement("div");

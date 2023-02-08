@@ -1,3 +1,7 @@
+/**
+ * @brief creates timeline for all projects  
+ * @param {List<experience>} experiences - list of experience objects containing logo, title, and description
+ */
 function createTimeline(experiences) {
     experiences.forEach(function(experience) {
         let timelineItem = document.createElement("div");
@@ -5,7 +9,7 @@ function createTimeline(experiences) {
         timelineItem.innerHTML = `
             <div class="timeline-left project-img">
                 <div class="circle-space">
-                    <img src="${experience.logo}" alt="${experience.company} logo">
+                    <img src="${experience.logo}" alt="${experience.title} logo">
                 </div>
             </div>
             <div class="timeline-right">
