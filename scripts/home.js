@@ -1,7 +1,7 @@
 /**
  * @brief writes the text with for typewritter effect  
- * @param {string} text text to be written 
- * @param {number} speed interval between letters being typed 
+ * @param {String} text text to be written 
+ * @param {Number} speed interval between letters being typed 
  */
 function write(text, speed) {
   var element = document.getElementById("text"); 
@@ -16,8 +16,8 @@ function write(text, speed) {
 
 /**
  * @brief deletes the text for typewritter effect  
- * @param {string} text text that needs to be deleten 
- * @param {number} speed interval between letters being deleted 
+ * @param {String} text text that needs to be deleten 
+ * @param {Number} speed interval between letters being deleted 
  */
 function deleteText(text, speed) {
   var element = document.getElementById("text");
@@ -33,7 +33,7 @@ function deleteText(text, speed) {
 /**
  * @brief used to create ms pause between write / delete   
  * @description async function that creates promise with intent to timeout after certain time in ms. Used to create 
- * @param {number} ms interval in ms that function wait delay
+ * @param {Number} ms interval in ms that function wait delay
  */
 async function waitForMs(ms) {
   return new Promise(resolve => setTimeout(resolve, ms))
@@ -41,9 +41,9 @@ async function waitForMs(ms) {
 
 /**
  * @brief "orchestrator" of the typewriter effect code
- * @param {array<string>} content list of words to be written 
- * @param {number} speed delay between characters being deleted/written
- * @param {number} interval interval in ms between write and delete functions  
+ * @param {Array<string>} content list of words to be written 
+ * @param {Number} speed delay between characters being deleted/written
+ * @param {Number} interval interval in ms between write and delete functions  
  */
 async function typewriterEffect(content, speed, interval) {  
   var i = 0;

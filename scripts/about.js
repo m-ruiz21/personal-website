@@ -1,3 +1,10 @@
+/**
+ * 
+ * @param {Object} skills_div Object with all the infomation for a specific skills div / category 
+ * @param {String} skills_div.title Name of skill category
+ * @param {List<skill>} skills_div.skills list with all the information about the skills (title and percentage)
+ * @returns {HTMLDivElement}  
+ */
 function createSkillsDivNode(skills_div) {
     let skillsDivNode = document.createElement("div");
 
@@ -15,6 +22,11 @@ function createSkillsDivNode(skills_div) {
     return skillsDivNode;
 }
 
+/**
+ * @brief creates a grid with all the skils
+ * @param {Array<Object>} skills_list list of objects containing all the information for each skill category.
+ * @see createSkillsDivNode()
+ */
 function createSkillsGrid(skills_list) {
     let container = document.createElement("div");
     container.style.display = "grid";
@@ -27,6 +39,10 @@ function createSkillsGrid(skills_list) {
     document.querySelector('.skills').appendChild(container);
 }
 
+/**
+ * @brief creates timeline for all job / educational experiences  
+ * @param {List<experience>} experiences - list of experience objects containing logo, company, title, dates, and description
+ */
 function createTimeline(experiences) {
     experiences.forEach(function(experience) {
         let timelineItem = document.createElement("div");
